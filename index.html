@@ -8,20 +8,22 @@
 <meta property="og:title" content="Lokesh Tadi | MERN Stack & Zoho Developer">
 <meta property="og:description" content="Building scalable web applications and automating business workflows with the MERN stack and the Zoho ecosystem.">
 <meta property="og:type" content="website">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/v2.css">
 </head>
 <body>
 
+<div class="loader" id="loader" aria-hidden="true"><img src="assets/brand.svg" alt="" width="120" height="120"><span>Lokesh Tadi</span></div>
 <div class="progress" id="progress"></div>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="#home" class="brand"><span class="brand-mark">LT</span><span class="brand-name">Lokesh Tadi</span></a>
+    <a href="#home" class="brand"><img class="brand-logo" src="assets/brand.svg" alt="Lokesh Tadi animated logo" width="44" height="44"><span class="brand-name">Lokesh Tadi</span></a>
     <nav class="nav-links" id="navLinks">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -58,7 +60,7 @@
     <div class="hero-visual reveal">
       <div class="photo-wrap">
         <div class="photo-ring"></div>
-        <img src="assets/lokesh.jpg" alt="Lokesh Tadi" class="photo" width="400" height="400">
+        <img src="assets/lokesh.jpg" alt="Lokesh Tadi" class="photo" width="640" height="640">
         <div class="chip chip-a"><span class="mono">Zoho Catalyst</span></div>
         <div class="chip chip-b"><span class="mono">React.js</span></div>
         <div class="chip chip-c"><span class="mono">Node.js</span></div>
@@ -67,13 +69,12 @@
   </div>
   <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
 </section>
-
 <!-- ============ ABOUT ============ -->
 <section class="section" id="about">
   <div class="container">
     <div class="sec-head reveal"><span class="eyebrow">About me</span><h2>Full stack by training, Zoho by craft</h2></div>
     <div class="about-grid">
-      <div class="about-text reveal">
+      <div class="about-text reveal" data-more="about">
         <p>I'm a motivated Full Stack Developer with deep expertise in the <b>MERN stack</b> and the <b>Zoho ecosystem</b>. My experience covers developing custom solutions, integrating third-party APIs and building web applications that optimise how businesses operate.</p>
         <p>I enjoy the space where low-code tools meet modern JavaScript frameworks: Zoho Creator, CRM and Catalyst on one side, React, Node and MongoDB on the other. That blend lets me pick the fastest, most maintainable route to a business-critical outcome.</p>
         <p>I'm passionate about delivering impactful digital solutions, thrive in collaborative teams where technology drives innovation, and I'm eager to connect with professionals to create meaningful results.</p>
@@ -85,7 +86,7 @@
         </div>
       </div>
       <div class="about-side reveal">
-        <div class="card ach">
+        <div class="card ach" data-more="achievements">
           <h3>Key achievements</h3>
           <ul class="ticks">
             <li>Built multiple <b>Zoho Creator</b> apps integrated with <b>Zoho CRM</b> for lead management, approvals and automated email workflows.</li>
@@ -104,7 +105,7 @@
 <section class="section alt" id="skills">
   <div class="container">
     <div class="sec-head reveal"><span class="eyebrow">Toolbox</span><h2>Skills &amp; technologies</h2></div>
-    <div class="skill-grid">
+    <div class="skill-grid" data-more="skills">
       <article class="card skill reveal">
         <div class="ico">Z</div><h3>Zoho ecosystem</h3>
         <div class="tags"><span>Creator</span><span>CRM</span><span>Catalyst</span><span>Billing</span><span>Subscriptions</span><span>Inventory</span><span>Books</span><span>Flow</span><span>Analytics</span><span>Desk</span><span>Projects</span></div>
@@ -130,7 +131,7 @@
         <div class="tags"><span>Agile / Scrum</span><span>Waterfall</span><span>Zoho Projects</span><span>Code reviews</span><span>Debugging</span></div>
       </article>
     </div>
-    <div class="meters reveal">
+    <div class="meters reveal" data-more="meters">
       <h3>Proficiency focus</h3>
       <div class="meter"><label>Zoho Development (Creator, CRM, Catalyst)</label><div class="bar"><i style="--w:92%"></i></div></div>
       <div class="meter"><label>React.js &amp; Front-end</label><div class="bar"><i style="--w:84%"></i></div></div>
@@ -139,7 +140,6 @@
     </div>
   </div>
 </section>
-
 <!-- ============ EXPERIENCE ============ -->
 <section class="section" id="experience">
   <div class="container">
@@ -149,8 +149,8 @@
       <article class="t-item reveal">
         <div class="t-dot"></div>
         <div class="card">
-          <div class="t-top"><div><h3>Zoho Developer</h3><p class="org">Nexivo</p></div><span class="date">06/2025 – Present</span></div>
-          <ul class="ticks">
+          <div class="t-top"><div class="t-id"><span class="co-logo"><img src="assets/nexivo.webp" alt="Nexivo logo" width="56" height="56" loading="lazy"></span><div><h3>Zoho Developer</h3><p class="org">Nexivo</p></div></div><span class="date">06/2025 – Present</span></div>
+          <ul class="ticks" data-more="nexivo">
             <li>Designed and implemented a <b>Queuing and Bussing System in Zoho Catalyst</b> using AppSail, Signals and Websillint, ensuring real-time task processing and scalability.</li>
             <li>Automated <b>Billing and Subscription creation</b> for every processed queue via the Zoho Billing and Zoho Subscriptions APIs, streamlining invoicing and payment workflows.</li>
             <li>Customised and automated <b>Zoho CRM</b> modules (Blueprints, Functions, Layouts, Workflows), improving sales and lead-management efficiency by <b>35%</b>.</li>
@@ -166,7 +166,7 @@
       <article class="t-item reveal">
         <div class="t-dot"></div>
         <div class="card">
-          <div class="t-top"><div><h3>Full Stack Developer</h3><p class="org">Busitron IT Solution Private Limited</p></div><span class="date">02/2025 – 05/2025</span></div>
+          <div class="t-top"><div class="t-id"><span class="co-logo"><img src="assets/busitron.webp" alt="Busitron logo" width="56" height="56" loading="lazy"></span><div><h3>Full Stack Developer</h3><p class="org">Busitron IT Solution Private Limited</p></div></div><span class="date">02/2025 – 05/2025</span></div>
           <ul class="ticks">
             <li>Worked with senior developers to build solutions using HTML, CSS, JavaScript, React.js, Node.js, Express.js and MongoDB.</li>
             <li>Conducted code reviews and debugged complex issues to improve system stability and reliability.</li>
@@ -178,7 +178,7 @@
       <article class="t-item reveal">
         <div class="t-dot"></div>
         <div class="card">
-          <div class="t-top"><div><h3>Salesforce Developer Virtual Intern</h3><p class="org">Salesforce</p></div><span class="date">11/2023 – 01/2024</span></div>
+          <div class="t-top"><div class="t-id"><span class="co-logo co-mono" aria-hidden="true">S</span><div><h3>Salesforce Developer Virtual Intern</h3><p class="org">Salesforce</p></div></div><span class="date">11/2023 – 01/2024</span></div>
           <ul class="ticks">
             <li>Delivered front-end and back-end solutions by interpreting development requirements.</li>
             <li>Enhanced Salesforce interfaces with customised page layouts and validation rules, improving data integrity.</li>
@@ -210,7 +210,7 @@
         <div><h3>Zoho Catalyst Queuing &amp; Bussing System</h3><p class="p-tag">Event-driven backend · Billing automation</p></div>
         <span class="p-badge">Zoho</span>
       </div>
-      <div class="p-body">
+      <div class="p-body" data-more="project">
         <div class="p-col">
           <h4>The problem</h4>
           <p>Work requests arrived in bursts and had to be processed reliably, in order, and without losing any item. Each processed request also needed an invoice and a subscription created, which was previously manual, slow and error-prone.</p>
@@ -242,7 +242,7 @@
         <div><h3>ERP Customisation: Lead-to-Invoice</h3><p class="p-tag">Zoho Creator · CRM · Subscriptions · Books</p></div>
         <span class="p-badge">Zoho</span>
       </div>
-      <div class="p-body">
+      <div class="p-body" data-more="project">
         <div class="p-col">
           <h4>The problem</h4>
           <p>Sales, finance and operations lived in separate tools. A won deal meant re-keying data into billing and accounting, and managers had no single view of a customer from first lead to paid invoice.</p>
@@ -272,7 +272,7 @@
         <div><h3>Zoho Creator + CRM Lead &amp; Approval Suite</h3><p class="p-tag">Lead management · Approvals · Email automation</p></div>
         <span class="p-badge">Zoho</span>
       </div>
-      <div class="p-body">
+      <div class="p-body" data-more="project">
         <div class="p-col">
           <h4>The problem</h4>
           <p>Leads were followed up inconsistently, approvals travelled by email and chat, and nobody could tell where a request was stuck.</p>
@@ -291,14 +291,13 @@
       </div>
     </article>
 
-    <!-- Project 4 -->
-    <article class="project reveal" data-cat="mern">
+    <!-- Project 4 -->    <article class="project reveal" data-cat="mern">
       <div class="p-head">
         <span class="p-num">04</span>
         <div><h3>Content Management Dashboard</h3><p class="p-tag">Full MERN stack · Authentication · RBAC</p></div>
         <span class="p-badge">MERN</span>
       </div>
-      <div class="p-body">
+      <div class="p-body" data-more="project">
         <div class="p-col">
           <h4>The problem</h4>
           <p>Teams needed one place to create and manage content, with each person seeing only what their role allows.</p>
@@ -327,7 +326,7 @@
         <div><h3>Food Cart Website</h3><p class="p-tag">Responsive ordering interface</p></div>
         <span class="p-badge">Front-end</span>
       </div>
-      <div class="p-body">
+      <div class="p-body" data-more="project">
         <div class="p-col">
           <h4>The problem</h4>
           <p>Ordering food online needs to be quick on a phone: browse, add to cart, check out with as few taps as possible.</p>
@@ -352,7 +351,7 @@
         <div><h3>Flappy Bird: Browser Game</h3><p class="p-tag">Physics · Scoring · Canvas rendering</p></div>
         <span class="p-badge">Game</span>
       </div>
-      <div class="p-body">
+      <div class="p-body" data-more="project">
         <div class="p-col">
           <h4>What I built</h4>
           <p>A web-based Flappy Bird using <b>JavaScript, HTML5 and CSS</b>. A game loop updates gravity and flap velocity every frame, detects collisions with pipes and the ground, and tracks the score as the bird passes each gap.</p>
@@ -376,7 +375,7 @@
         <div><h3>Rock Paper Scissors</h3><p class="p-tag">Interactive, responsive mini-game</p></div>
         <span class="p-badge">Game</span>
       </div>
-      <div class="p-body">
+      <div class="p-body" data-more="project">
         <div class="p-col">
           <h4>What I built</h4>
           <p>An interactive game with a responsive layout and <b>immediate feedback</b>. The computer's choice is generated randomly, the winner is decided by rule logic, and the scoreboard updates instantly.</p>
@@ -393,12 +392,11 @@
     </article>
   </div>
 </section>
-
 <!-- ============ EDUCATION ============ -->
 <section class="section" id="education">
   <div class="container">
     <div class="sec-head reveal"><span class="eyebrow">Learning</span><h2>Education &amp; certifications</h2></div>
-    <div class="edu-grid">
+    <div class="edu-grid" data-more="edu">
       <article class="card edu reveal"><span class="date">Graduated 06/2024</span><h3>B.Tech, Computer Science &amp; Engineering with AI</h3><p>Kakinada Institute of Engineering and Technology, Korangi</p><b class="score">GPA 71</b></article>
       <article class="card edu reveal"><span class="date">Graduated 2020</span><h3>Diploma, Electronics &amp; Communication Engineering</h3><p>Dr. B R Ambedkar Polytechnic College, Yanam</p><b class="score">GPA 77</b></article>
       <article class="card edu reveal"><span class="date">Graduated 2017</span><h3>Higher Education</h3><p>P.K.G High School, Yanam</p><b class="score">GPA 82</b></article>
@@ -421,6 +419,7 @@
       <div class="contact-actions">
         <a class="btn btn-light" href="mailto:lokeshluc6@gmail.com">✉ lokeshluc6@gmail.com</a>
         <a class="btn btn-outline" href="tel:+919390078202">☎ +91 93900 78202</a>
+        <a class="btn btn-outline" href="https://wa.me/919390078202?text=Hi%20Lokesh%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn btn-outline" href="https://github.com/LokeshTadi" target="_blank" rel="noopener">GitHub</a>
       </div>
       <p class="loc">📍 Hi-Tech City, Hyderabad, 500081</p>
@@ -430,11 +429,71 @@
 </main>
 
 <footer class="footer">
-  <div class="container foot-inner">
-    <span>© <span id="yr"></span> Lokesh Tadi. All rights reserved.</span>
-    <a href="#home">Back to top ↑</a>
+  <div class="foot-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0,40 C240,100 480,0 720,40 C960,80 1200,10 1440,45 L1440,90 L0,90 Z"></path></svg>
+  </div>
+  <div class="foot-marquee" aria-hidden="true">
+    <div class="marq-track">
+      <span>Zoho Catalyst</span><i>✦</i><span>Zoho CRM</span><i>✦</i><span>Zoho Creator</span><i>✦</i><span>React.js</span><i>✦</i><span>Node.js</span><i>✦</i><span>MongoDB</span><i>✦</i><span>Deluge</span><i>✦</i><span>REST APIs</span><i>✦</i>
+      <span>Zoho Catalyst</span><i>✦</i><span>Zoho CRM</span><i>✦</i><span>Zoho Creator</span><i>✦</i><span>React.js</span><i>✦</i><span>Node.js</span><i>✦</i><span>MongoDB</span><i>✦</i><span>Deluge</span><i>✦</i><span>REST APIs</span><i>✦</i>
+    </div>
+  </div>
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <img src="assets/brand.svg" alt="Lokesh Tadi animated logo" width="96" height="96" loading="lazy">
+      <h3>Lokesh Tadi</h3>
+      <p>MERN Stack &amp; Zoho Developer crafting workflows that run themselves.</p>
+      <div class="foot-social">
+        <a href="https://github.com/LokeshTadi" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        <a href="mailto:lokeshluc6@gmail.com" aria-label="Email">@</a>
+        <a href="https://wa.me/919390078202?text=Hi%20Lokesh%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        <a href="tel:+919390078202" aria-label="Call">☎</a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Explore</h4>
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a>
+    </div>
+    <div class="foot-col">
+      <h4>Now building</h4>
+      <p class="mono small">&gt; queue.process()<br>&gt; billing.create()<br>&gt; crm.blueprint.run()</p>
+      <p class="status"><i class="dot"></i> Available for new work</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="container foot-inner">
+      <span>© <span id="yr"></span> Lokesh Tadi · Hyderabad, India</span>
+      <span class="made">Built with <b>♥</b> &amp; a lot of <span class="mono">&lt;code/&gt;</span></span>
+      <a href="#home" class="to-top">Back to top ↑</a>
+    </div>
+    <p class="container tm-note">Salesforce, Zoho, Nexivo and Busitron are trademarks of their respective owners. Company names are used only to describe my work history and imply no affiliation or endorsement.</p>
   </div>
 </footer>
+
+<!-- WhatsApp widget -->
+<div class="wa" id="wa">
+  <div class="wa-pop" id="waPop" role="dialog" aria-label="Chat on WhatsApp" aria-hidden="true">
+    <div class="wa-head">
+      <img src="assets/brand.svg" alt="" width="40" height="40">
+      <div><b>Lokesh Tadi</b><small><i class="dot"></i> Typically replies within a few hours</small></div>
+      <button class="wa-x" id="waClose" aria-label="Close chat">×</button>
+    </div>
+    <div class="wa-body">
+      <div class="wa-msg">Hi there 👋<br>Have a Zoho or full-stack project in mind? Send me a message on WhatsApp and let's talk.</div>
+      <label class="wa-label" for="waText">Your message</label>
+      <textarea id="waText" rows="3">Hi Lokesh, I came across your portfolio and would like to discuss a project. Are you available for a quick chat?</textarea>
+    </div>
+    <a class="wa-send" id="waSend" href="https://wa.me/919390078202" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.47 15.04L2 22l5.1-1.34A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.13 15.08l-.3-.17-3.03.8.81-2.95-.19-.31A8.1 8.1 0 0 1 12.04 3.8zm-3.1 3.9c-.2 0-.5.07-.76.35-.26.28-1 .98-1 2.4s1.03 2.78 1.17 2.97c.15.2 2.02 3.2 5 4.36 2.47.97 2.97.78 3.5.73.54-.05 1.74-.71 1.98-1.4.25-.69.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35-.3-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57z"/></svg>
+      Chat on WhatsApp
+    </a>
+  </div>
+  <button class="wa-fab" id="waFab" aria-label="Chat on WhatsApp" aria-expanded="false">
+    <span class="wa-ping"></span>
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.47 15.04L2 22l5.1-1.34A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.13 15.08l-.3-.17-3.03.8.81-2.95-.19-.31A8.1 8.1 0 0 1 12.04 3.8zm-3.1 3.9c-.2 0-.5.07-.76.35-.26.28-1 .98-1 2.4s1.03 2.78 1.17 2.97c.15.2 2.02 3.2 5 4.36 2.47.97 2.97.78 3.5.73.54-.05 1.74-.71 1.98-1.4.25-.69.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35-.3-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57z"/></svg>
+  </button>
+  <span class="wa-tip" id="waTip">Chat with me 👋</span>
+</div>
 
 <script src="js/main.js"></script>
 </body>
