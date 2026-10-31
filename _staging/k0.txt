@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lokesh Tadi | MERN Stack & Zoho Developer</title>
+<meta name="description" content="Lokesh Tadi - Full Stack (MERN) and Zoho Developer in Hyderabad. Zoho Catalyst, Creator, CRM, Billing, Books, Flow and custom web applications.">
+<meta property="og:title" content="Lokesh Tadi | MERN Stack & Zoho Developer">
+<meta property="og:description" content="Building scalable web applications and automating business workflows with the MERN stack and the Zoho ecosystem.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/v2.css">
+</head>
+<body>
+
+<div class="loader" id="loader" aria-hidden="true"><img src="assets/brand.svg" alt="" width="120" height="120"><span>Lokesh Tadi</span></div>
+<div class="progress" id="progress"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="brand"><img class="brand-logo" src="assets/brand.svg" alt="Lokesh Tadi animated logo" width="44" height="44"><span class="brand-name">Lokesh Tadi</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact" class="btn btn-sm">Hire me</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <span class="pill"><i class="dot"></i> Open to new opportunities</span>
+      <h1>Hi, I'm <span class="grad">Lokesh Tadi</span><br>I build business-critical software.</h1>
+      <p class="lead">MERN Stack Developer and Zoho Developer from Hyderabad. I design scalable web applications and wire together third-party APIs so that business workflows run themselves.</p>
+      <div class="typed-line"><span class="mono">&gt;</span> <span id="typed" class="mono"></span><span class="caret"></span></div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn">View my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <div class="stats">
+        <div><b data-count="35" data-suffix="%">0</b><span>CRM efficiency gain</span></div>
+        <div><b data-count="40" data-suffix="%">0</b><span>less manual effort</span></div>
+        <div><b data-count="9" data-suffix="+">0</b><span>Zoho products</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="photo-wrap">
+        <div class="photo-ring"></div>
+        <img src="assets/lokesh.jpg" alt="Lokesh Tadi" class="photo" width="640" height="640">
+        <div class="chip chip-a"><span class="mono">Zoho Catalyst</span></div>
+        <div class="chip chip-b"><span class="mono">React.js</span></div>
+        <div class="chip chip-c"><span class="mono">Node.js</span></div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+</section>
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">About me</span><h2>Full stack by training, Zoho by craft</h2></div>
+    <div class="about-grid">
+      <div class="about-text reveal" data-more="about">
