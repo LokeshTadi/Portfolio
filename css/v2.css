@@ -1,0 +1,131 @@
+/* =====================================================
+   v2 additions: logo, loader, company logos, footer,
+   WhatsApp widget, mobile "view more"
+   ===================================================== */
+
+/* animated brand logo in nav */
+.brand-logo{width:44px;height:44px;object-fit:contain;border-radius:12px;background:#fff;box-shadow:var(--shadow);padding:2px}
+
+/* loader */
+.loader{position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;background:#fff;transition:opacity .6s ease,visibility .6s ease}
+.loader img{width:120px;height:120px;object-fit:contain}
+.loader span{font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);font-size:.85rem}
+.loader.done{opacity:0;visibility:hidden}
+
+/* photo: head-and-shoulders crop, shown in a circle */
+.photo{object-position:50% 50%}
+
+/* company logos in experience */
+.t-id{display:flex;align-items:center;gap:1rem}
+.co-logo{flex:none;width:58px;height:58px;border-radius:14px;background:#fff;border:1px solid var(--light);display:grid;place-items:center;overflow:hidden;box-shadow:var(--shadow)}
+.co-logo img{width:100%;height:100%;object-fit:contain;padding:6px}
+.co-dark{background:#000;border-color:#000}
+.co-dark img{padding:0}
+.co-mono{background:linear-gradient(135deg,var(--primary),var(--primary-deep));color:#fff;font-weight:800;font-size:1.5rem;border:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+
+/* more toggle (hidden on desktop) */
+.more-btn{display:none}
+
+/* ---------- creative footer ---------- */
+.footer{position:relative;margin-top:0;padding:0;border-top:0;background:var(--primary-deep);color:var(--light);overflow:hidden}
+.foot-wave{line-height:0;background:#fff}
+.foot-wave svg{display:block;width:100%;height:70px}
+.foot-wave path{fill:var(--primary-deep)}
+.foot-marquee{border-top:1px solid rgba(189,205,234,.18);border-bottom:1px solid rgba(189,205,234,.18);padding:.9rem 0;overflow:hidden;background:rgba(255,255,255,.03)}
+.marq-track{display:flex;gap:1.4rem;width:max-content;animation:marq 32s linear infinite;white-space:nowrap;font-family:'JetBrains Mono',monospace;font-size:.9rem;color:var(--light)}
+.marq-track i{font-style:normal;color:#6f95e0}
+@keyframes marq{to{transform:translateX(-50%)}}
+.foot-grid{display:grid;grid-template-columns:1.4fr .8fr 1fr;gap:2.6rem;padding:3.4rem 0 2.4rem}
+.foot-brand img{width:96px;height:96px;object-fit:contain;background:#fff;border-radius:22px;padding:6px;margin-bottom:1rem;box-shadow:0 14px 34px -14px rgba(0,0,0,.6)}
+.foot-brand h3{color:#fff;font-size:1.5rem;margin-bottom:.4rem}
+.foot-brand p{max-width:38ch;color:var(--light);opacity:.9}
+.foot-social{display:flex;gap:.6rem;margin-top:1.2rem}
+.foot-social a{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(189,205,234,.25);color:#fff;font-weight:800;font-size:.8rem;transition:.25s}
+.foot-social a:hover{background:var(--light);color:var(--primary-deep);transform:translateY(-4px) rotate(-4deg)}
+.foot-col h4{color:#fff;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem}
+.foot-col a{display:block;color:var(--light);padding:.25rem 0;opacity:.85;transition:.2s;width:max-content}
+.foot-col a:hover{opacity:1;color:#fff;transform:translateX(6px)}
+.foot-col .small{font-size:.82rem;line-height:1.9;color:#9fb6e3;background:rgba(0,0,0,.25);padding:.9rem 1rem;border-radius:12px;border:1px solid rgba(189,205,234,.15)}
+.status{display:flex;align-items:center;gap:.55rem;margin-top:1rem;font-weight:700;color:#fff;font-size:.9rem}
+.foot-bottom{border-top:1px solid rgba(189,205,234,.18);padding:1.2rem 0;font-size:.88rem}
+.foot-bottom .foot-inner{align-items:center}
+.foot-bottom .made b{color:#ff6b8a}
+.foot-bottom a.to-top{color:#fff;font-weight:700;padding:.4rem .9rem;border-radius:999px;border:1px solid rgba(189,205,234,.35);transition:.2s}
+.foot-bottom a.to-top:hover{background:var(--light);color:var(--primary-deep)}
+
+/* ---------- WhatsApp widget ---------- */
+.wa{position:fixed;right:20px;bottom:20px;z-index:150;display:flex;flex-direction:column;align-items:flex-end;gap:.8rem}
+.wa-fab{position:relative;width:60px;height:60px;border-radius:50%;border:0;cursor:pointer;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.7);transition:.25s}
+.wa-fab:hover{transform:scale(1.08)}
+.wa-ping{position:absolute;inset:0;border-radius:50%;background:#25D366;opacity:.5;animation:ping 2.2s cubic-bezier(0,0,.2,1) infinite;z-index:-1}
+@keyframes ping{80%,100%{transform:scale(1.7);opacity:0}}
+.wa-tip{position:absolute;right:74px;bottom:14px;background:#fff;color:var(--ink);padding:.5rem .9rem;border-radius:12px;font-weight:700;font-size:.85rem;box-shadow:var(--shadow);white-space:nowrap;animation:tipin .5s .4s both;transition:.3s}
+.wa-tip::after{content:"";position:absolute;right:-6px;top:50%;margin-top:-6px;width:12px;height:12px;background:#fff;transform:rotate(45deg)}
+@keyframes tipin{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:none}}
+.wa.open .wa-tip{opacity:0;visibility:hidden}
+.wa-pop{width:min(340px,calc(100vw - 40px));background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px -20px rgba(15,34,80,.55);border:1px solid var(--light-2);transform-origin:bottom right;transform:scale(.85) translateY(14px);opacity:0;visibility:hidden;transition:.3s cubic-bezier(.2,.8,.2,1)}
+.wa.open .wa-pop{transform:none;opacity:1;visibility:visible}
+.wa-head{display:flex;align-items:center;gap:.8rem;padding:1rem 1.1rem;background:linear-gradient(120deg,var(--primary),var(--primary-dark));color:#fff}
+.wa-head img{width:40px;height:40px;border-radius:12px;background:#fff;padding:3px;object-fit:contain}
+.wa-head b{display:block;line-height:1.2}
+.wa-head small{display:flex;align-items:center;gap:.4rem;color:var(--light);font-size:.72rem}
+.wa-x{margin-left:auto;background:rgba(255,255,255,.15);border:0;color:#fff;width:32px;height:32px;border-radius:50%;font-size:1.3rem;line-height:1;cursor:pointer}
+.wa-x:hover{background:rgba(255,255,255,.3)}
+.wa-body{padding:1rem 1.1rem 0;background:var(--light-3)}
+.wa-msg{background:#fff;border:1px solid var(--light-2);border-radius:4px 16px 16px 16px;padding:.8rem 1rem;font-size:.9rem;color:var(--ink);box-shadow:0 4px 10px -6px rgba(34,72,158,.3)}
+.wa-label{display:block;margin:.9rem 0 .35rem;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--primary)}
+.wa-body textarea{width:100%;resize:none;border:1.5px solid var(--light);border-radius:12px;padding:.7rem .85rem;font:inherit;font-size:.9rem;color:var(--ink);background:#fff;outline:none;margin-bottom:1rem}
+.wa-body textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(34,72,158,.15)}
+.wa-send{display:flex;align-items:center;justify-content:center;gap:.6rem;margin:0;padding:.95rem;background:#25D366;color:#fff;font-weight:800;transition:.2s}
+.wa-send:hover{background:#1ebe5a}
+
+/* =====================================================
+   MOBILE (<=720px): hide photo, collapse sections
+   Desktop (>720px) is intentionally untouched.
+   ===================================================== */
+@media(max-width:720px){
+  .hero-visual{display:none}
+  .hero{min-height:auto;padding:104px 0 70px}
+  .hero-grid{grid-template-columns:1fr}
+  .scroll-hint{display:none}
+  .stats{gap:1.2rem}
+  .stats b{font-size:1.6rem}
+
+  /* "view more" */
+  .more-wrap{position:relative;transition:none!important}
+  .more-wrap.collapsed{overflow:hidden}
+  .more-wrap.collapsed::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 85%);pointer-events:none}
+  .section.alt .more-wrap.collapsed::after{background:linear-gradient(to bottom,rgba(244,247,252,0),#f4f7fc 85%)}
+  .card .more-wrap.collapsed::after{background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 85%)}
+  .project .more-wrap.collapsed::after{background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 85%)}
+  .more-btn{display:flex;align-items:center;justify-content:center;gap:.45rem;margin:.9rem auto 0;padding:.6rem 1.4rem;border-radius:999px;border:1.5px solid var(--primary);background:#fff;color:var(--primary);font:700 .86rem 'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:var(--shadow)}
+  .more-btn:active{background:var(--primary);color:#fff}
+  .more-btn .chev{display:inline-block;transition:transform .3s}
+  .more-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+  .project .more-btn{margin:0 auto 1.3rem}
+  .p-body.more-wrap{padding-bottom:1.2rem}
+
+  .t-id{gap:.75rem}
+  .co-logo{width:48px;height:48px;border-radius:12px}
+  .t-top{flex-direction:column;gap:.6rem}
+  .section{padding:64px 0}
+  .sec-head{margin-bottom:2rem}
+
+  .foot-grid{grid-template-columns:1fr;gap:2rem;padding:2.4rem 0 1.6rem}
+  .foot-bottom .foot-inner{flex-direction:column;text-align:center}
+  .wa{right:14px;bottom:14px}
+  .wa-tip{display:none}
+  .contact-card{padding:3rem 1.2rem;border-radius:24px}
+  .contact-actions .btn{width:100%;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){.marq-track,.wa-ping{animation:none!important}}
+
+/* ---------- Animated brand logo ---------- */
+@keyframes logoPulse{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.07) rotate(-4deg)}}
+@keyframes logoSpin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.brand-logo,.loader img,.foot-brand img,.wa-head img{animation:logoPulse 3.2s ease-in-out infinite}
+.loader img{animation:logoSpin 2.4s cubic-bezier(.6,.1,.3,.9) infinite}
+@media (prefers-reduced-motion:reduce){.brand-logo,.loader img,.foot-brand img,.wa-head img{animation:none}}
+
+/* trademark attribution */
+.tm-note{margin:0;padding:.2rem 0 1.2rem;font-size:.72rem;line-height:1.5;color:rgba(189,205,234,.65);text-align:center}
