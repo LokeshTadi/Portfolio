@@ -32,22 +32,22 @@ ul{list-style:none}
 .brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--primary);color:#fff;font-size:.95rem;box-shadow:var(--shadow)}
 .nav-links{display:flex;align-items:center;gap:1.9rem;font-weight:600;font-size:.94rem}
 .nav-links a:not(.btn){position:relative;color:var(--muted);transition:.2s}
-.nav-links a:not(.btn):hover,.nav-links a.active{color:var(--primary)}
+.nav-links a.active{color:var(--primary)}@media (hover:hover) and (pointer:fine){.nav-links a:not(.btn):hover{color:var(--primary)}}
 .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--primary);transition:.25s}
-.nav-links a:not(.btn):hover::after,.nav-links a.active::after{width:100%}
+.nav-links a.active::after{width:100%}@media (hover:hover) and (pointer:fine){.nav-links a:not(.btn):hover::after{width:100%}}
 .burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;flex-direction:column;justify-content:center;gap:5px;align-items:center}
 .burger span{display:block;width:22px;height:2px;background:var(--primary);transition:.3s}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.6rem;border-radius:999px;background:var(--primary);color:#fff;font-weight:700;font-size:.95rem;border:2px solid var(--primary);transition:.25s;cursor:pointer;box-shadow:var(--shadow)}
-.btn:hover{background:var(--primary-dark);border-color:var(--primary-dark);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+@media (hover:hover) and (pointer:fine){.btn:hover{background:var(--primary-dark);border-color:var(--primary-dark);transform:translateY(-2px);box-shadow:var(--shadow-lg)}}
 .btn-sm{padding:.55rem 1.2rem;font-size:.88rem;color:#fff!important}
 .btn-ghost{background:transparent;color:var(--primary);box-shadow:none}
-.btn-ghost:hover{background:var(--primary);color:#fff}
+@media (hover:hover) and (pointer:fine){.btn-ghost:hover{background:var(--primary);color:#fff}}
 .btn-light{background:#fff;color:var(--primary);border-color:#fff}
-.btn-light:hover{background:var(--light);border-color:var(--light);color:var(--primary-deep)}
+@media (hover:hover) and (pointer:fine){.btn-light:hover{background:var(--light);border-color:var(--light);color:var(--primary-deep)}}
 .btn-outline{background:transparent;border-color:rgba(255,255,255,.55);box-shadow:none}
-.btn-outline:hover{background:rgba(255,255,255,.14);border-color:#fff}
+@media (hover:hover) and (pointer:fine){.btn-outline:hover{background:rgba(255,255,255,.14);border-color:#fff}}
 
 /* hero */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
@@ -95,7 +95,7 @@ h2{font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.15;letter-spacing:-.025em;
 .sub{margin-top:.9rem;color:var(--muted)}
 h3{font-size:1.2rem;letter-spacing:-.01em}
 .card{background:#fff;border:1px solid var(--light-2);border-radius:var(--radius);padding:1.8rem;box-shadow:var(--shadow);transition:.3s}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--light)}
+@media (hover:hover) and (pointer:fine){.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--light)}}
 
 /* about */
 .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2.5rem;align-items:start}
@@ -137,10 +137,10 @@ h3{font-size:1.2rem;letter-spacing:-.01em}
 /* projects */
 .filters{display:flex;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:2.4rem}
 .f{padding:.55rem 1.3rem;border-radius:999px;background:#fff;border:1.5px solid var(--light);color:var(--primary);font-weight:700;font-size:.88rem;cursor:pointer;transition:.2s;font-family:inherit}
-.f:hover{border-color:var(--primary)}
+@media (hover:hover) and (pointer:fine){.f:hover{border-color:var(--primary)}}
 .f.active{background:var(--primary);color:#fff;border-color:var(--primary);box-shadow:var(--shadow)}
 .project{background:#fff;border:1px solid var(--light-2);border-radius:22px;margin-bottom:1.8rem;box-shadow:var(--shadow);overflow:hidden;transition:.3s}
-.project:hover{box-shadow:var(--shadow-lg);border-color:var(--light)}
+@media (hover:hover) and (pointer:fine){.project:hover{box-shadow:var(--shadow-lg);border-color:var(--light)}}
 .project.hide{display:none}
 .p-head{display:flex;align-items:center;gap:1.2rem;padding:1.5rem 1.9rem;background:linear-gradient(100deg,var(--primary),var(--primary-dark));color:#fff}
 .p-head h3{font-size:1.35rem}

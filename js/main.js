@@ -235,6 +235,6 @@
   document.addEventListener('click', function (e) { if (wa.classList.contains('open') && !wa.contains(e.target)) setWa(false); });
   /* gentle nudge: open the popup once after 12s if the visitor has not interacted */
   setTimeout(function () {
-    if (!sessionStorage.getItem('waShown') && !wa.classList.contains('open')) { setWa(true); sessionStorage.setItem('waShown', '1'); }
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !sessionStorage.getItem('waShown') && !wa.classList.contains('open')) { setWa(true); sessionStorage.setItem('waShown', '1'); }
   }, 12000);
 })();
