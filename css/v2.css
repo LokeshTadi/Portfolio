@@ -133,3 +133,6 @@
 
 /* touch: remove double-tap delay on controls (no visual change) */
 a,button,.f,.more-btn,.wa-fab{touch-action:manipulation}
+
+/* Salesforce cloud logo is wider than tall: give it more room in the tile */
+.co-logo.co-sf img{padding:3px}
